@@ -1,19 +1,6 @@
 import time
 from bs4 import BeautifulSoup as bs
 
-def successNotification(taskData):
-    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Past Splash!')
-    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Task Data: ' + str(taskData))
-
-
-def getSitekey(splashBrowser, taskData):
-    productPageSoup = bs(splashBrowser.page_source, 'html.parser')
-    try:
-        sitekey = productPageSoup.find('div', {'class': 'g-recaptcha'}).get('data-sitekey')
-        print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Sitekey: ' + sitekey)
-    except:
-        print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Unable To Get Sitekey!')
-
 def getCart(taskData, splashBrowser):
     print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Inject ATC Code Or Manually Add To Cart!')
     cartUrls = {'au': 'https://www.adidas.com.au/on/demandware.store/Sites-adidas-AU-Site/en_AU/Cart-Show',
@@ -28,6 +15,18 @@ def getCart(taskData, splashBrowser):
     openTabs = splashBrowser.window_handles
     splashBrowser.switch_to.window(openTabs[0])
 
+def getSitekey(splashBrowser, taskData):
+    productPageSoup = bs(splashBrowser.page_source, 'html.parser')
+    try:
+        sitekey = productPageSoup.find('div', {'class': 'g-recaptcha'}).get('data-sitekey')
+        taskData['sitekey'] = sitekey
+    except:
+        taskData['sitekey'] = 'N/A'
+
+def successNotification(taskData):
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Past Splash!')
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Task Data: ' + str(taskData))
+
 def showBrowser(splashBrowser):
     splashBrowser.maximize_window()
 
@@ -36,8 +35,8 @@ def stayAlive():
         None
 
 def showSplashBrowser(splashBrowser, taskData):
-    successNotification(taskData)
-    getSitekey(splashBrowser, taskData)
     getCart(taskData, splashBrowser)
+    getSitekey(splashBrowser, taskData)
+    successNotification(taskData)
     showBrowser(splashBrowser)
     stayAlive()

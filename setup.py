@@ -43,9 +43,10 @@ def startTasks(config):
 
 
 def setTaskData():
-    taskData = {'taskNumber': ''
+    taskData = {'taskNumber': '',
                 'region': '',
-                'proxy': ''}
+                'proxy': '',
+                'sitekey' : ''}
     return taskData
 
 def setup():
