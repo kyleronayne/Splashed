@@ -2,7 +2,6 @@ import time
 from bs4 import BeautifulSoup as bs
 
 def getCart(taskData, splashBrowser):
-    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Inject ATC Code Or Manually Add To Cart!')
     cartUrls = {'au': 'https://www.adidas.com.au/on/demandware.store/Sites-adidas-AU-Site/en_AU/Cart-Show',
                 'uk': 'https://www.adidas.co.uk/on/demandware.store/Sites-adidas-GB-Site/en_GB/Cart-Show',
                 'fr': 'https://www.adidas.fr/on/demandware.store/Sites-adidas-FR-Site/fr_FR/Cart-Show',
@@ -26,7 +25,8 @@ def getSitekey(splashBrowser, taskData):
 def successNotification(taskData):
     print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Past Splash!')
     print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Task Data: ' + str(taskData))
-
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Inject ATC Code Or Manually Add To Cart!')
+    
 def showBrowser(splashBrowser):
     splashBrowser.maximize_window()
 
