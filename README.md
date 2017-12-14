@@ -6,7 +6,7 @@ Adidas bot that creates chrome sessions to wait on the splash page for exclusive
 - Latest version of Chrome
 - Libraries: selenium, bs4, zip
 
-# Setup Instructions (Follow before running)
+# Setup Instructions (follow before running)
 - Enter a region locale in config.txt (au, uk, fr, ca, us)
 - Enter the splash url in config.txt
 - Enter the name of your proxies file in config.txt (Do not include .txt)
