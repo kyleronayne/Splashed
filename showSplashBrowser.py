@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 
 def successNotification(taskData):
     print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Past Splash!')
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Task Data: ' + taskData)
 
 def getSitekey(splashBrowser, taskData):
     productPageSoup = bs(splashBrowser.page_source, 'html.parser')
