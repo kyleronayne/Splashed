@@ -14,8 +14,8 @@ def main(taskData, gmailCookies, splashBrowser):
     showSplashBrowser(splashBrowser, taskData)
 
 def createTasks(config, gmailCookies):
-    taskNumber = 0
     tasks = []
+    taskNumber = 0
     for i in range(0, len(config['proxies'])):
         taskNumber += 1
         taskData = setTaskData()
