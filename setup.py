@@ -43,10 +43,9 @@ def startTasks(config):
 
 
 def setTaskData():
-    taskData = {'splashMode': '',
+    taskData = {'taskNumber': ''
                 'region': '',
-                'ip': '',
-                'taskNumber': ''}
+                'proxy': ''}
     return taskData
 
 def setup():
