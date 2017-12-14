@@ -40,4 +40,4 @@ def getSplash(config, taskData, splashBrowser):
     print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Got Region Homepage')
     print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Getting Splash Page')
     splashBrowser.get(config['splashUrl'])
-    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Waitng On Splash Page')
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Waiting On Splash Page')
