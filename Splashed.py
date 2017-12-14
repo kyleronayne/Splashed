@@ -1,7 +1,7 @@
 from setup import setup, setTaskData, startTasks
 from proxyHandling import proxyHandling
 import threading
-from splashBrowserSetup import launchSplashBrowser, getSplash, addGmailCookies
+from splashBrowserSetup import launchSplashBrowser, addGmailCookies, getSplash
 from productDetection import productDetection
 from showSplashBrowser import showSplashBrowser
 
