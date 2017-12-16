@@ -1,3 +1,4 @@
+
 from bs4 import BeautifulSoup as bs
 import random
 import time
@@ -10,6 +11,7 @@ def checkConnection(pageSoup, taskData, splashBrowser):
     for errorString in ['unfortunately we are unable to give you access to our site at this time. ', 'this page isn’t working', 'proxy error']:
         if errorString in pageSoup.text.lower():
             print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Connection Error, Reloading Splash Page!')
+            splashBrowser.delete_all_cookies()
             splashBrowser.refresh()
             break
 
