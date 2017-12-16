@@ -3,7 +3,7 @@ Adidas bot that creates chrome sessions to wait on the splash page for exclusive
 
 # Requirements
 - Python 3.6 or later
-- Latest version of Chrome
+- Chrome v60 (Newer versions experience logging issues)
 - Libraries: selenium-requests, bs4, zip (Install via pip)
 
 # Setup Instructions (follow before running)
