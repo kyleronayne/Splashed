@@ -30,5 +30,5 @@ Feel free to submit any issues or bugs you encounter, I will do my best to addre
 
 # Drop Results
 - 12/16/17 (Yeezy Boost 350 V2 "Blue Tint")
-Splash Passes:
+- *Splash Passes:
 Carts:
