@@ -1,4 +1,4 @@
-# Splashed
+# Splashed - Abandoned
 Adidas bot that creates chrome sessions to wait on the splash page for exclusive releases
 
 # Requirements
@@ -24,10 +24,3 @@ Adidas bot that creates chrome sessions to wait on the splash page for exclusive
 - Do not minimize any browser sessions, they will be rendered useless (Browser sessions will auto-hide)
 
 Feel free to submit any issues or bugs you encounter, I will do my best to address them!
-
-
-
-# Drop Results
-- 12/16/17 (Yeezy Boost 350 V2 "Blue Tint")
-- Splash Passes:
-- Carts:
