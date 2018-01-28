@@ -1,12 +1,13 @@
-# Splashed *Abandoned*
+# Splashed 
+###### Status: Under Development
 Adidas bot that creates chrome sessions to wait on the splash page for exclusive releases
 
-# Requirements
+### Requirements
 - Python 3.6 or later
 - Chrome v60 (Newer versions experience logging issues)
 - Libraries: selenium-requests, bs4, zip (Install via pip)
 
-# Setup Instructions (follow before running)
+### Setup Instructions (follow before running)
 - Enter a region locale in config.txt (au, uk, fr, ca, us)
 - Enter the splash url in config.txt
 - Enter the name of your proxies file in config.txt (Do not include .txt)
@@ -14,7 +15,7 @@ Adidas bot that creates chrome sessions to wait on the splash page for exclusive
 - Enter a custom css selector (Optional)
 - Download all files and run Splashed.py
 
-# Tips
+### Tips
 - Stress test your desired amount of tasks you want to run prior to release to see what your computer can handle
 - Initialize tasks prior to release (Tasks may take longer to initialize based on the number of tasks and your computer specifications)
 - Log in to Gmail when prompted to pass Adidas browser verification and get easier captchas
