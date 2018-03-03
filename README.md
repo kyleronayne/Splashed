@@ -20,9 +20,9 @@ Adidas bot that creates chrome sessions to wait on the splash page for exclusive
 - Stress test your desired amount of tasks you want to run prior to release to see what your cpu can handle
 - Log in to Gmail when prompted to pass Adidas browser verification and get easier captchas
 - If you receive a spinning Add To Cart button on the product page, inject ATC script on the opened cart page
-- Region homepages and splash page will take longer to load during a release, be patient (Page reloads are built-in)
-- More proxies = more sessions = greater possibility for success
-- Do not minimize any browser sessions, they will be rendered useless (Browser sessions will auto-hide)
+- Splash page will take longer to load during a release, be patient
+- More tasks = greater possibility for success
+- If you close a checkout browser you will NOT be able to reopen it, be careful
 
 ## To Do
 - [ ] Use proxy with checkout browser
