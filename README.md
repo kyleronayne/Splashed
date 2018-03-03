@@ -1,6 +1,6 @@
 # Splashed 
 ###### Status: Under Development
-Adidas bot that creates chrome sessions to wait on the splash page for exclusive releases
+Adidas bot that waits on splash headlessly
 
 ### Requirements
 - Python 3.6 or later
