@@ -1,1 +1,1 @@
-{'region': '', 'splashUrl': '', 'proxiesFile': '', 'customDetector': ''}
+{'region': 'us', 'splashUrl': 'http://cartchefs.co.uk/splash', 'proxiesFile': 'proxies', 'customDetector': ''}

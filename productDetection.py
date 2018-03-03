@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup as bs
 import random
 import time
@@ -58,6 +57,7 @@ def pageInteraction(splashBrowser):
 
 def productDetection(splashBrowser, taskData):
     while True:
+        print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Watitng On Splash Page')
         pageSoup = getPageSoup(splashBrowser)
         checkConnection(pageSoup, taskData, splashBrowser)
         productPage = detector1(pageSoup)
