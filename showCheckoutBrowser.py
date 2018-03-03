@@ -44,7 +44,7 @@ def stayAlive():
     while True:
         None
 
-def showChekoutBrowser(splashBrowser, taskData, config):
+def showCheckoutBrowser(splashBrowser, taskData, config):
     #getCart(taskData, splashBrowser)
     getSitekey(splashBrowser, taskData)
     successNotification(taskData)
