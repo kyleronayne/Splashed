@@ -24,4 +24,11 @@ Adidas bot that creates chrome sessions to wait on the splash page for exclusive
 - More proxies = more sessions = greater possibility for success
 - Do not minimize any browser sessions, they will be rendered useless (Browser sessions will auto-hide)
 
+## To Do
+[ ] Use proxy with checkout browser
+[ ] Get gceeqs cookie
+[ ] Get product page cookies
+[ ] ATC
+[ ] Get car cookies
+
 Feel free to submit any issues or bugs you encounter, I will do my best to address them!
