@@ -3,7 +3,7 @@ from proxyHandling import proxyHandling
 import threading
 from splashBrowserSetup import launchSplashBrowser, addGmailCookies, getSplash
 from productDetection import productDetection
-from showChecokutBrowser import showCheckoutBrowser
+from showCheckoutBrowser import showCheckoutBrowser
 import time
 
 config, gmailCookies = setup()
