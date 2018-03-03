@@ -45,7 +45,7 @@ def stayAlive():
         None
 
 def showChekoutBrowser(splashBrowser, taskData, config):
-    getCart(taskData, splashBrowser)
+    #getCart(taskData, splashBrowser)
     getSitekey(splashBrowser, taskData)
     successNotification(taskData)
     showBrowser(splashBrowser, config)
