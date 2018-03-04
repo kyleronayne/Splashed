@@ -11,7 +11,7 @@ Adidas bot that waits on splash headlessly
 - Satisfy aforementioned requirements
 - Enter a region locale in config.txt (au, uk, fr, ca, us)
 - Enter the splash url in config.txt
-- Enter the name of your proxies file in config.txt (Do not include .txt)
+- Enter the name of your proxies text file in config.txt (Do not include .txt)
 - Proxies must be entered one per line (Enter 'localhost' if you do not want to use a proxy)
 - Enter a custom css selector (Optional)
 - Download as ZIP
