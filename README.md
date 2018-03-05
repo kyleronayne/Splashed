@@ -9,12 +9,12 @@ Adidas bot that waits on splash headlessly
 
 ### Setup Instructions (follow before running)
 - Satisfy aforementioned requirements
+- Download as ZIP
 - Enter a region locale in config.txt (au, uk, fr, ca, us)
 - Enter the splash url in config.txt
 - Enter the name of your proxies text file in config.txt (Do not include .txt)
 - Proxies must be entered one per line (Enter 'localhost' if you do not want to use a proxy)
 - Enter a custom css selector (Optional)
-- Download as ZIP
 
 ### Tips
 - Stress test your desired amount of tasks you want to run prior to release to see what your cpu can handle (Tested to handle 200+ tasks on an AWS m5.4xlarge server)
