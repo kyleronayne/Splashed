@@ -25,7 +25,7 @@ Adidas bot that waits on splash headlessly
 - If you close a checkout browser you will NOT be able to reopen it, be careful
 
 ## To Do
-- [ ] Use proxy with checkout browser
+- [ ] Use proxy with splash and checkout browser
 - [ ] Slack Notifications
 - [ ] Discord Notifications
 - [ ] Get gceeqs cookie
