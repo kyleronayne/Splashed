@@ -27,6 +27,7 @@ Adidas bot that waits on splash headlessly
 ## To Do
 - [ ] Use proxy with splash and checkout browser
 - [ ] Test proxies
+- [ ] Randomize User-Agent
 - [ ] Slack Notifications
 - [ ] Discord Notifications
 - [ ] Get gceeqs cookie
