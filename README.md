@@ -30,7 +30,6 @@ Adidas bot that waits on splash headlessly
 - [ ] Randomize User-Agent
 - [ ] Slack Notifications
 - [ ] Discord Notifications
-- [ ] Get gceeqs cookie
 - [ ] Get product page cookies
 - [ ] ATC
 - [ ] Get cart cookies
