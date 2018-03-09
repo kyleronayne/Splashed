@@ -75,3 +75,4 @@ def productDetection(splashBrowser, taskData):
         pageInteraction(splashBrowser)
         detectionDelay = random.randint(60, 120)
         time.sleep(detectionDelay)
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Past Splash! Launching Checkout Browser')

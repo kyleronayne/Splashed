@@ -1,13 +1,13 @@
 import zipfile
 
-def setProxy(config, taskData):
+def proxyConfig(config, taskData):
     rawProxy = config['proxies'][0]
-    taskData['proxy'] = rawProxy
     config['proxies'].remove(rawProxy)
-    proxy = {'host': rawProxy.split(':')[0],
-             'port': rawProxy.split(':')[1],
-             'username': rawProxy.split(':')[2],
-             'password': rawProxy.split(':')[3]}
+    taskData['proxy'] = rawProxy
+    if rawProxy == 'localhost':
+        proxy = None
+    if len(rawProxy.split(':')) == 2:
+        proxy = 'proxy-server=' + rawProxy
     return proxy
 
 def createProxyPlugin(proxy):
