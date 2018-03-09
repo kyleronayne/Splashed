@@ -4,6 +4,7 @@ import threading
 from splashBrowserSetup import launchSplashBrowser, addGmailCookies, getSplash
 from productDetection import productDetection
 from showCheckoutBrowser import showCheckoutBrowser
+from notify import notify
 import time
 
 config, gmailCookies = setup()
@@ -14,13 +15,14 @@ def main(gmailCookies, taskData, proxyPlugin):
     getSplash(config, taskData, splashBrowser)
     productDetection(splashBrowser, taskData)
     showCheckoutBrowser(splashBrowser, taskData, config)
+    notify(taskData, config)
 
 def createTasks(config, gmailCookies):
     tasks = []
     taskNumber = 0
     for i in range(0, len(config['proxies'])):
         taskNumber += 1
-        taskData = setTaskData()
+        taskData = setTaskData(config)
         taskData['taskNumber'] = taskNumber
         proxyPlugin = proxyHandling(config, taskData)
         task = threading.Thread(target = main, args = (gmailCookies, taskData, proxyPlugin,))
