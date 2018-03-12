@@ -25,6 +25,7 @@ Adidas bot that waits on splash headlessly
 - If you close a checkout browser you will NOT be able to reopen it, be careful
 
 ## To Do
+- [ ] Connection Error Handling
 - [ ] Use proxy with splash and checkout browser
 - [ ] Test proxies
 - [ ] Randomize User-Agent
