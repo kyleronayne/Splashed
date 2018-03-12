@@ -26,13 +26,10 @@ Adidas bot that waits on splash headlessly
 
 ## To Do
 - [ ] Connection Error Handling
-- [ ] Use proxy with splash and checkout browser
-- [ ] Test proxies
+- [ ] Proxy Support
 - [ ] Randomize User-Agent
 - [ ] Slack Notifications
 - [ ] Discord Notifications
-- [ ] Get product page cookies
-- [ ] ATC
-- [ ] Get cart cookies
+- [ ] Get Product Page Cookies
 
 Feel free to submit any issues or bugs you encounter, I will do my best to address them!
