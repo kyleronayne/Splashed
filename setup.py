@@ -1,5 +1,5 @@
 import time
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium import webdriver
 
 def welcomeHeader():
@@ -22,18 +22,13 @@ def initiateHeader(config):
     input('Press "Enter" To Initialize ' + str(len(config['proxies']))  + ' Tasks')
 
 def gmailLogin():
+    gmailBrowserProfile = webdriver.FirefoxProfile()
+    gmailBrowserProfile.set_preference('general.useragent.override', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0')
     gmailBrowserOptions = Options()
-    gmailBrowserOptions.add_argument('disable-infobars')
-    gmailBrowserOptions.add_argument(':authority:accounts.google.com=accounts.google.com')
-    gmailBrowserOptions.add_argument(':method:=GET')
-    gmailBrowserOptions.add_argument(':path:=/ServiceLogin')
-    gmailBrowserOptions.add_argument(':scheme:=https')
-    gmailBrowserOptions.add_argument('Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8')
-    gmailBrowserOptions.add_argument('Accept-Encoding=gzip, deflate, br')
-    gmailBrowserOptions.add_argument('Accept-Language=en-US,en;q=0.9')
-    gmailBrowserOptions.add_argument('Upgrade-Insecure-Requests=1')
-    gmailBrowserOptions.add_argument('User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36')
-    gmailBrowser = webdriver.Chrome(chrome_options = gmailBrowserOptions)
+    gmailBrowserOptions.add_argument('--disable-extensions')
+    gmailBrowserOptions.add_argument('--disable-infobars')
+    gmailBrowser = webdriver.Firefox(gmailBrowserProfile, firefox_options = gmailBrowserOptions)
+    gmailBrowser.delete_all_cookies()
     gmailBrowser.set_window_position(600, 0)
     gmailBrowser.get('https://accounts.google.com/ServiceLogin')
     print()
@@ -49,7 +44,7 @@ def startTasks(config):
     input('Press "Enter" To Start Tasks')
     print()
     print('-- Log --')
-    print(time.strftime('[%I:%M:%S %p - General] ') + 'Starting All Tasks!')
+    print(time.strftime('[%I:%M:%S %p] ') + 'Starting All Tasks!')
 
 
 def setTaskData(config):

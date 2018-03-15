@@ -1,1 +1,1 @@
-{'PID': '', 'region': '', 'splashUrl': '', 'proxiesFile': '', 'webhookUrl': '', 'customDetector': ''}
+{'PID': '', 'region': '', 'splashUrl': '', 'proxiesFile': 'proxies', 'webhookUrl': '', 'customDetector': ''}
