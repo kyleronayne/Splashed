@@ -1,6 +1,6 @@
 import time
 from bs4 import BeautifulSoup as bs
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium import webdriver
 
 def getProductPageCookies(splashBrowser):
@@ -22,16 +22,14 @@ def getCart(taskData, splashBrowser):
     splashBrowser.switch_to.window(openTabs[0])
 
 def launchCheckoutBrowser(splashBrowser, config):
+    checkoutBrowserProfile = webdriver.FirefoxProfile()
+    checkoutBrowserProfile.set_preference('general.useragent.override', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0')
     checkoutBrowserOptions = Options()
-    checkoutBrowserOptions.add_argument('disable-infobars')
-    checkoutBrowserOptions.add_argument('User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36')
-    checkoutBrowserOptions.add_argument('Accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8')
-    checkoutBrowserOptions.add_argument('Accept-Encoding=gzip, deflate, br')
-    checkoutBrowserOptions.add_argument('Accept-Language=en-US,en;q=0.9')
-    #checkoutBrowserOptions.add_argument('Host=www.adidas.com')
-    checkoutBrowserOptions.add_argument('Referer=' + config['splashUrl'])
-    checkoutBrowserOptions.add_argument('Upgrade-Insecure-Requests=1')
-    checkoutBrowser = webdriver.Chrome(chrome_options = checkoutBrowserOptions)
+    checkoutBrowserOptions.add_argument('--disable-extensions')
+    checkoutBrowserOptions.add_argument('--disable-infobars')
+    checkoutBrowser = webdriver.Firefox(checkoutBrowserProfile, firefox_options = checkoutBrowserOptions)
+    checkoutBrowser.delete_all_cookies()
+    checkoutBrowser.set_window_position(600, 0)
     return checkoutBrowser
 
 def addProductPageCookies(checkoutBrowser, config, productPageCookies):
