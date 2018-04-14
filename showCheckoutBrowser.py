@@ -32,7 +32,10 @@ def launchCheckoutBrowser(splashBrowser, config):
     checkoutBrowser.set_window_position(600, 0)
     return checkoutBrowser
 
-def addProductPageCookies(checkoutBrowser, config, productPageCookies):
+def addCookies(checkoutBrowser, config, gmailCookies, productPageCookies):
+    checkoutBrowser.get('https://www.google.com/')
+    for cookie in gmailCookies:
+        checkoutBrowser.add_cookie(cookie)
     checkoutBrowser.get(config['splashUrl'])
     for cookie in productPageCookies:
         checkoutBrowser.add_cookie(cookie)
@@ -46,9 +49,9 @@ def getSitekey(checkoutBrowser, taskData):
     except:
         taskData['sitekey'] = 'N/A'
 
-def showCheckoutBrowser(splashBrowser, taskData, config):
+def showCheckoutBrowser(splashBrowser, taskData, config, gmailCookies):
     productPageCookies = getProductPageCookies(splashBrowser)
     #getCart(taskData, splashBrowser)
     checkoutBrowser = launchCheckoutBrowser(splashBrowser, config)
-    addProductPageCookies(checkoutBrowser, config, productPageCookies)
+    addCookies(checkoutBrowser, config, gmailCookies, productPageCookies)
     getSitekey(checkoutBrowser, taskData)

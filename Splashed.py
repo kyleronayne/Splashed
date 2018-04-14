@@ -14,7 +14,7 @@ def main(gmailCookies, taskData, proxyPlugin):
     addGmailCookies(gmailCookies, splashBrowser)
     getSplash(config, taskData, splashBrowser)
     productDetection(splashBrowser, taskData)
-    showCheckoutBrowser(splashBrowser, taskData, config)
+    showCheckoutBrowser(splashBrowser, taskData, config, gmailCookies)
     notify(taskData, config)
 
 def createTasks(config, gmailCookies):

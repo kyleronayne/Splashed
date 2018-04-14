@@ -33,6 +33,7 @@ def gmailLogin():
     gmailBrowser.get('https://accounts.google.com/ServiceLogin')
     print()
     input('Press "Enter" Once Logged In To Gmail')
+    gmailBrowser.get('https://www.google.com/')
     gmailCookies = gmailBrowser.get_cookies()
     gmailBrowser.quit()
     return gmailCookies

@@ -21,11 +21,8 @@ def launchSplashBrowser(taskData, proxyPlugin):
 def addGmailCookies(gmailCookies, splashBrowser):
     splashBrowser.get('https://www.google.com/')
     for cookie in gmailCookies:
-        try:
-            splashBrowser.add_cookie(cookie)
-        except Exception as error:
-            pass
+        splashBrowser.add_cookie(cookie)
 
 def getSplash(config, taskData, splashBrowser):
-    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Getting Splash Page')
+    print(time.strftime('[%I:%M:%S %p - Task ' + str(taskData['taskNumber']) + '] ') + 'Getting Splash Page URL From Config')
     splashBrowser.get(config['splashUrl'])
